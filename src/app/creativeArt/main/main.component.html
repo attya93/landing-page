@@ -1,0 +1,57 @@
+<div class="conatiner">
+  <div class="row creative-landing__section creative-landing__section-one">
+    <div class="col-12 m-0 p-0">
+      <div class="creative-landing__meida">
+        <img [src]="image" alt="demo" loading=lazy>
+      </div>
+    </div>
+  </div>
+  <div class="row creative-landing__section creative-landing__section-two">
+    <div class="col-12 p-0 m-0">
+      <div class="creative-landing__section-two__content">
+        <h3>Creative Art Therapies</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+          PageMaker including versions of Lorem Ipsum ,Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+          PageMaker including versions of Lorem Ipsum .</p>
+        <div class="creative-landing__section-two__members">
+          <div class="d-flex">
+            <div class="user-info">
+              <img [src]="man" alt="user" loading=lazy>
+              <span>Carol Hammal</span>
+            </div>
+            <div class="user-info">
+              <img [src]="man" alt="user" loading=lazy>
+              <span>Carol Hammal</span>
+            </div>
+            <div class="user-info">
+              <img [src]="man" alt="user" loading=lazy>
+              <span>Carol Hammal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row creative-landing__section creative-landing__section-three">
+    <div class="col-12 creative-landing__section-three_routing">
+      <div class="d-flex routing-links">
+        <p [routerLink]="['./individual']" routerLinkActive="active">Individual Sessions</p>
+        <p [routerLink]="['./group']" routerLinkActive="active">Group Sessions</p>
+        <p [routerLink]="['./workshops']" routerLinkActive="active">Workshops</p>
+      </div>
+      <hr class="sperator">
+    </div>
+  </div>
+  <div class="row creative-landing__section">
+    <router-outlet></router-outlet>
+  </div>
+</div>
