@@ -5,6 +5,10 @@ import { MainComponent } from './main/main.component';
 import { IndividualComponent } from './individual/individual.component';
 import { GroupComponent } from './group/group.component';
 import { WorkshopComponent } from './workshop/workshop.component';
+import { VgCoreModule } from '@videogular/ngx-videogular/core';
+import { VgControlsModule } from '@videogular/ngx-videogular/controls';
+import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
+import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { WorkshopComponent } from './workshop/workshop.component';
   ],
   imports: [
     CommonModule,
-    CreativeArtRoutingModule
+    CreativeArtRoutingModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule
   ],
 })
 export class CreativeArtModule { }

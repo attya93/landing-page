@@ -6,14 +6,12 @@
 
   &__meida {
     margin: 0px;
-    margin-top: 96px;
     width: 100%;
     height: 75vh;
 
-    & img {
+    & iframe {
       width: 100%;
       height: 100%;
-      object-fit: cover;
     }
   }
 
@@ -21,15 +19,14 @@
     margin: 0px;
     padding: 0px;
 
-    &-one {
-      margin-top: 96px;
-    }
+
 
     &-two {
       &__content {
         padding-top: 96px;
         padding-left: 308px;
-        padding-right: 273px;
+        padding-right: 308px;
+        text-align: left;
         background: #F8FBFF;
 
         & h3 {
@@ -49,6 +46,8 @@
         & .user-info {
           justify-content: center;
           align-items: center;
+          display: flex;
+          flex-direction: column;
           margin-right: 30px;
           height: 70px;
           width: 70px;
@@ -63,7 +62,7 @@
           & span {
             font-size: 10px;
             font-weight: bold;
-
+            text-align: center;
           }
         }
       }
@@ -74,21 +73,24 @@
 
       &_routing {
         position: relative;
+        border-bottom: 2px solid lightblue;
         margin-bottom: 110px;
 
-        & .sperator {
-          position: relative;
-          height: 1px;
-          top: -36px;
-          z-index: 1;
-        }
+        // & .sperator {
+        //   position: relative;
+        //   height: 1px;
+        //   top: -36px;
+        //   z-index: 1;
+        // }
 
 
         & .routing-links {
           padding-left: 405px;
           padding-top: 33px;
+          position: relative;
 
           & p {
+            cursor: pointer;
             margin-right: 45px;
             padding-bottom: 20px;
             font-size: 12px;
@@ -98,11 +100,21 @@
             justify-content: center;
             display: flex;
 
-            &:hover,
-            &.active {
-              font-weight: bold;
-              cursor: pointer;
-              border-bottom: 7px solid #0FBFB3;
+            & span {
+              position: absolute;
+              bottom: -2px;
+              width: 17%;
+              height: 5px;
+              border-radius: 20px;
+              background: #0FBFB3;
+              visibility: hidden;
+
+            }
+
+            &:hover>span,
+            &.active>span {
+              visibility: visible;
+
             }
           }
         }

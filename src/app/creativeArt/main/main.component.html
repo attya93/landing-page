@@ -2,7 +2,8 @@
   <div class="row creative-landing__section creative-landing__section-one">
     <div class="col-12 m-0 p-0">
       <div class="creative-landing__meida">
-        <img [src]="image" alt="demo" loading=lazy>
+        <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/qPGOCZD0oN4')"
+          title="YouTube video player" frameborder="0" allow=" autoplay;  encrypted-media; picture-in-picture"></iframe>
       </div>
     </div>
   </div>
@@ -24,18 +25,17 @@
           PageMaker including versions of Lorem Ipsum .</p>
         <div class="creative-landing__section-two__members">
           <div class="d-flex">
-            <div class="user-info">
+            <div class="user-info" *ngFor="let user of listOfUser">
+              <img [src]="user.image" [alt]="user.title" loading=lazy>
+              <span class="text-center">{{user.title}}</span>
+            </div>
+
+
+
+            <!-- <div class="user-info">
               <img [src]="man" alt="user" loading=lazy>
               <span>Carol Hammal</span>
-            </div>
-            <div class="user-info">
-              <img [src]="man" alt="user" loading=lazy>
-              <span>Carol Hammal</span>
-            </div>
-            <div class="user-info">
-              <img [src]="man" alt="user" loading=lazy>
-              <span>Carol Hammal</span>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -44,11 +44,20 @@
   <div class="row creative-landing__section creative-landing__section-three">
     <div class="col-12 creative-landing__section-three_routing">
       <div class="d-flex routing-links">
-        <p [routerLink]="['./individual']" routerLinkActive="active">Individual Sessions</p>
-        <p [routerLink]="['./group']" routerLinkActive="active">Group Sessions</p>
-        <p [routerLink]="['./workshops']" routerLinkActive="active">Workshops</p>
+        <p [routerLink]="['./individual']" routerLinkActive="active">
+          Individual Sessions
+          <span class="sperator2"></span>
+        </p>
+        <p [routerLink]="['./group']" routerLinkActive="active">
+          Group Sessions
+          <span class="sperator2"></span>
+        </p>
+        <p [routerLink]="['./workshops']" routerLinkActive="active">
+          Workshops
+          <span class="sperator2"></span>
+        </p>
       </div>
-      <hr class="sperator">
+      <!-- <hr class="sperator"> -->
     </div>
   </div>
   <div class="row creative-landing__section">
